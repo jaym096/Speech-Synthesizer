@@ -1,0 +1,24 @@
+try
+            {
+                if (comboBox1.SelectedIndex == 0 && comboBox3.SelectedIndex == 0)
+                {
+                    voice.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Child);
+                }
+                else if (comboBox1.SelectedIndex == 0 && comboBox3.SelectedIndex == 1)
+                {
+                    voice.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Adult);
+                }
+                else if (comboBox1.SelectedIndex == 0 && comboBox3.SelectedIndex == 2)
+                {
+                    voice.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Senior);
+                }
+                else if (comboBox1.SelectedIndex == 1 && comboBox3.SelectedIndex == 0)
+                {
+                    voice.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
+                }
+                voice.SpeakAsync(textBox1.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("there was an error", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
